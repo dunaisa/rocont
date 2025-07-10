@@ -14,8 +14,23 @@
 @mixin title-h2 {
   font-family: 'Gropled';
   line-height: 95%;
-  color: $main-white;
+  color: $main-black;
   font-size: 4rem;
+  @media screen and (max-width: 960px) {
+    line-height: 100%;
+    font-size: 2.8rem;
+  }
+}
+
+@mixin title-h4 {
+  font-family: 'Gropled';
+  line-height: 110%;
+  color: $main-white;
+  font-size: 2.4rem;
+  @media screen and (max-width: 960px) {
+    line-height: 100%;
+    font-size: 2rem;
+  }
 }
 
 @mixin text-style-lead {

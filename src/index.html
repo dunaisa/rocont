@@ -44,14 +44,14 @@
 
   <main class="main">
 
-    <div class="promo">
+    <section class="promo">
       <div class="promo__container promo__container--desk">
         <video autoplay loop muted playsinline class="promo__video">
           <source src="./images/promo-video.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="promo__content">
-          <h1 class="page__title">
+          <h1 class="promo__title">
             Просто потому<br> что&nbsp;можем
           </h1>
           <p class="promo__description">
@@ -88,7 +88,7 @@
       </div>
       <div class="promo__container promo__container--mob">
         <div class="promo__video-wrapper">
-          <h1 class="page__title page__title--video">
+          <h1 class="promo__title promo__title--video">
             Просто потому<br> что&nbsp;можем
           </h1>
           <video autoplay loop muted playsinline class="promo__video">
@@ -98,7 +98,7 @@
 
         </div>
         <div class="promo__content">
-          <h1 class="page__title page__title--undervideo">
+          <h1 class="promo__title promo__title--undervideo">
             Просто потому<br> что&nbsp;можем
           </h1>
           <p class="promo__description">
@@ -133,7 +133,95 @@
           </span>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="about">
+      <div class="about__wrapper">
+        <h2 class="about__title">
+          Это — не совсем&nbsp;то, что&nbsp;вы думаете
+        </h2>
+        <div class="slider">
+          <div class="slider__wrapper">
+            <div class="slider__slide">
+              <img src="./images/slide-img-01.png" alt="" class="slider__slide-img">
+              <div class="slider__slide-content">
+                <h4 class="slider__slide-title">
+                  Немного упругости
+                </h4>
+                <p class="slider__slide-description">
+                  Чуть-чуть сияния, и&nbsp;ощущение, что вы о&nbsp;себе позаботились
+                </p>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img src="./images/slide-img-02.png" alt="" class="slider__slide-img">
+              <div class="slider__slide-content">
+                <h4 class="slider__slide-title">
+                  Немного упругости
+                </h4>
+                <p class="slider__slide-description">
+                  Чуть-чуть сияния, и&nbsp;ощущение, что вы о&nbsp;себе позаботились
+                </p>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img src="./images/slide-img-03.png" alt="" class="slider__slide-img">
+              <div class="slider__slide-content">
+                <h4 class="slider__slide-title">
+                  Немного упругости
+                </h4>
+                <p class="slider__slide-description">
+                  Чуть-чуть сияния, и&nbsp;ощущение, что вы о&nbsp;себе позаботились
+                </p>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img src="./images/slide-img-04.png" alt="" class="slider__slide-img">
+              <div class="slider__slide-content">
+                <h4 class="slider__slide-title">
+                  Немного упругости
+                </h4>
+                <p class="slider__slide-description">
+                  Чуть-чуть сияния, и&nbsp;ощущение, что вы о&nbsp;себе позаботились
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slider__btns">
+            <button class="slider__btn slider__btn-prev">
+              <svg width="48" height="20" viewBox="0 0 48 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4033_6)">
+                <path d="M14 0V0C14 5.52285 9.52285 10 4 10V10" stroke-width="2"/>
+                <path d="M14.125 20V20C14.125 14.4772 9.64785 10 4.125 10L4 10L58 10" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_4033_6">
+                <rect width="20" height="48" rx="10" transform="matrix(0 1 1 0 0 0)" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+            </button>
+            <button class="slider__btn slider__btn-next">
+              <svg width="48" height="20" viewBox="0 0 48 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4033_6)">
+                <path d="M34 20V20C34 14.4772 38.4772 10 44 10V10" stroke-width="2"/>
+                <path d="M33.875 1.91784e-06V1.91784e-06C33.875 5.52285 38.3522 10 43.875 10L44 10L-10 10" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_4033_6">
+                <rect width="20" height="48" rx="10" transform="matrix(0 -1 -1 0 48 20)" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>                
+                
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
 
   </main>
 

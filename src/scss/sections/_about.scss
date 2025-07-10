@@ -1,0 +1,21 @@
+@use '../variables' as *;
+@use '../mixins';
+
+.about {
+  width: 100%;
+  overflow: visible;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    column-gap: 8px;
+    position: relative;
+    @media screen and (max-width: 640px) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  &__title {
+    @include mixins.title-h2;
+  }
+}

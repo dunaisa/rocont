@@ -72,6 +72,28 @@
       gap: 24px;
     }
   }
+  &__title {
+    max-width: 600px;
+    @include mixins.title-h1;
+    &--video {
+      @media screen and (max-width: 540px) {
+        padding: 32px;
+        max-width: 30%;
+      }
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
+    }
+    &--undervideo {
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
+      @media screen and (max-width: 400px) {
+        display: block;
+        color: $main-black;
+      }
+    }
+  }
   &__description {
     max-width: 400px;
     @include mixins.text-style-lead;
