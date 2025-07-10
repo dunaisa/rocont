@@ -1,6 +1,7 @@
-.title {
-  font-family: 'TildaSansRegular';
-  line-height: 90%;
-  font-weight: bold;
-  font-style: normal;
-}
+@use './reset';
+
+@use '../fonts/fonts.scss';
+@use './layout/page';
+@use './layout/header';
+@use './layout/main';
+@use './sections/promo';

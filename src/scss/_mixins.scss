@@ -1,0 +1,77 @@
+@use './variables' as *;
+
+@mixin title-h1 {
+  font-family: 'Gropled';
+  line-height: 90%;
+  color: $main-white;
+  font-size: 6.4rem;
+  @media screen and (max-width: 960px) {
+    line-height: 100%;
+    font-size: 3.2rem;
+  }
+}
+
+@mixin title-h2 {
+  font-family: 'Gropled';
+  line-height: 95%;
+  color: $main-white;
+  font-size: 4rem;
+}
+
+@mixin text-style-lead {
+  font-family: 'TildaSansMedium';
+  line-height: 140%;
+  color: $main-white;
+  font-size: 2.1rem;
+  letter-spacing: -1px;
+  @media screen and (max-width: 960px) {
+    line-height: 120%;
+    font-size: 1.8rem;
+  }
+}
+
+@mixin text-style-body {
+  font-family: 'TildaSansRegular';
+  line-height: 150%;
+  color: $main-white;
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+}
+
+@mixin text-style-note {
+  font-family: 'TildaSansRegular';
+  line-height: 100%;
+  color: $main-white;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+}
+
+@mixin btn($btn-color) {
+  font-family: 'Gropled';
+  line-height: 110%;
+  color: $main-white;
+  font-size: 1.8rem;
+  background-color: $btn-color;
+  border-radius: 40px;
+  padding: 16px 16px 16px 24px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  max-width: max-content;
+  @media screen and (max-width: 960px) {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 375px) {
+    gap: 14px;
+  }
+}
+
+@mixin page-arrow($bg-color) {
+  background-color: $bg-color;
+  border-radius: 50px;
+  height: 20px;
+  width: 48px;
+}
