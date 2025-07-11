@@ -1,0 +1,70 @@
+@use '../variables' as *;
+@use '../mixins';
+
+.footer {
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  &__container {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    padding: 32px 0;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 32px;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    max-width: 288px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    @media screen and (max-width: 768px) {
+      grid-row: 2;
+    }
+    @media screen and (max-width: 375px) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    @include mixins.text-style-body;
+    & {
+      color: $main-black;
+    }
+  }
+  &__notes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-self: end;
+    @media screen and (max-width: 768px) {
+      justify-self: start;
+      grid-row: 4;
+    }
+  }
+  &__logo {
+    justify-self: end;
+    @media screen and (max-width: 768px) {
+      justify-self: start;
+      grid-row: 1;
+    }
+  }
+  &__separator {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      width: 100%;
+      grid-row: 3;
+      height: 2px;
+      background-color: $main-black;
+      border: none;
+      outline: none;
+    }
+  }
+
+}
