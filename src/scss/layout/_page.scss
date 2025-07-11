@@ -6,13 +6,46 @@ html {
 }
 
 .page {
-  background-color: $main-gray;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: $main-gray;
+    z-index: -6;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-page-1400.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -5;
+    @media screen and (max-width: 960px) {
+      background-image: url(../images/bg-page-960.png);
+      opacity: 0.05;
+    }
+    @media screen and (max-width: 640px) {
+      background-image: url(../images/bg-page-640.png);
+      opacity: 0.05;
+    }
+    @media screen and (max-width: 480px) {
+      background-image: url(../images/bg-page-480.png);
+    }
+    @media screen and (max-width: 320px) {
+      background-image: url(../images/bg-page-320.png);
+    }
+  }
   &__logo {
     display: inline-block;
     width: 130px;
