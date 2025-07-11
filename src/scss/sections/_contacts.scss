@@ -1,0 +1,117 @@
+@use '../variables' as *;
+@use '../mixins';
+
+.contacts {
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50.86% 48%;
+  align-items: stretch;
+  column-gap: 8px;
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 53% 46%;
+  }
+  @media screen and (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__details {
+    border-radius: 24px;
+    background-color: $main-white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 850px) {
+      justify-content: flex-start;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      @media screen and (max-width: 1100px) {
+        padding: 24px 0;
+      }
+      @media screen and (max-width: 850px) {
+        padding: 24px;
+      }
+    }
+  }
+  &__map {
+    border-radius: 24px;
+    background-color: $main-white;
+    overflow: hidden;
+    box-sizing: border-box;
+    @media screen and (max-width: 850px) {
+      height: 250px;
+    }
+    @media screen and (max-width: 425px) {
+      height: 220px;
+    }
+    @media screen and (max-width: 375px) {
+      height: 200px;
+    }
+    & img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    @include mixins.title-h2;
+    & {
+      margin-bottom: 16px;
+    }
+    @media screen and (max-width: 425px) {
+      & {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__text {
+    @include mixins.text-style-lead;
+    & {
+      color: $main-black;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &:nth-child(4) {
+      gap: 32px;
+      @media screen and (max-width: 425px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+  }
+  &__icon {
+    background-color: $accent-color;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__btn {
+    @include mixins.btn($accent-color, $main-white);
+    & {
+      margin-top: 16px;
+    }
+    @media screen and (max-width: 425px) {
+      & {
+        margin-top: 8px;
+      }
+    }
+  }
+  &__arrow {
+    @include mixins.btn-arrow($main-white, $accent-color);
+  }
+}

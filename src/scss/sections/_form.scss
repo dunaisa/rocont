@@ -1,0 +1,70 @@
+@use '../variables' as *;
+@use '../mixins';
+
+.form {
+  display: flex;
+  background-color: $accent-color;
+  border-radius: 24px;
+  padding: 64px 86px 64px 64px;
+  align-items: flex-start;
+  @media screen and (max-width: 1100px) {
+    padding: 48px 96px 48px 48px;
+  }
+  @media screen and (max-width: 850px) {
+    padding: 24px;
+  }
+  &__title {
+    @include mixins.title-h2;
+    & {
+      color: $main-white;
+    }
+  }
+  &__conainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  &__wrapper {
+    max-width: 450px;
+    width: 100%;
+    @media screen and (max-width: 1100px) {
+      max-width: 350px;
+    }
+    @media screen and (max-width: 850px) {
+      max-width: 100%;
+    }
+  }
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @media screen and (max-width: 1100px) {
+      gap: 24px;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    &-icon {
+      border-radius: 50%;
+      background-color: $main-white;
+      width: 24px;
+      height: 24px;
+    }
+    &-text {
+      @include mixins.text-style-lead;
+    }
+  }
+}

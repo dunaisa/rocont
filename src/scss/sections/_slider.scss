@@ -24,7 +24,7 @@
     }
   }
   &__btn {
-    @include mixins.btn(transparent);
+    @include mixins.btn(transparent, transparent);
     & {
       padding: 0;
       transition: 0.3s;
@@ -35,7 +35,7 @@
       }
     }
     &:hover {
-      @include mixins.btn($accent-color);
+      @include mixins.btn($accent-color, transparent);
       & {
         padding: 0;
       }
@@ -76,6 +76,7 @@
       }
       @media screen and (max-width: 768px) {
         opacity: 1;
+        padding: 24px;
       }
     }
     &-title {
@@ -92,9 +93,13 @@
     }
     @media screen and (max-width: 768px) {
       max-width: 210px;
+      max-height: 320px;
     }
     @media screen and (max-width: 640px) {
       max-width: 250px;
+    }
+    @media screen and (max-width: 480px) {
+      max-height: 280px;
     }
 
   }

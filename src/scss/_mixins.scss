@@ -61,10 +61,10 @@
   letter-spacing: -1px;
 }
 
-@mixin btn($btn-color) {
+@mixin btn($btn-color, $text-color) {
   font-family: 'Gropled';
   line-height: 110%;
-  color: $main-white;
+  color: $text-color;
   font-size: 1.8rem;
   background-color: $btn-color;
   border-radius: 40px;
@@ -81,12 +81,17 @@
   }
   @media screen and (max-width: 375px) {
     gap: 14px;
+    max-width: 100%;
+    justify-content: space-between;
   }
 }
 
-@mixin page-arrow($bg-color) {
+@mixin btn-arrow($bg-color, $stroke-color) {
   background-color: $bg-color;
   border-radius: 50px;
   height: 20px;
   width: 48px;
+    & svg path {
+      stroke: $stroke-color;
+    }
 }

@@ -103,7 +103,10 @@
     }
   }
   &__btn {
-    @include mixins.btn($accent-color);
+    @include mixins.btn($accent-color, $main-white);
+  }
+  &__arrow {
+    @include mixins.btn-arrow($main-white, $accent-color);
   }
   &__note {
     align-self: flex-end;
